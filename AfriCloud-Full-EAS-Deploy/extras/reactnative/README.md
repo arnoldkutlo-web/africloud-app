@@ -1,0 +1,1 @@
+Expo React Native scaffold. Run `npm install && expo start`. Implement API calls using axios or fetch.

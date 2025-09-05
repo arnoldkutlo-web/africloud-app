@@ -1,0 +1,14 @@
+{
+  "name": "africloud-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "supertest": "^6.4.3",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "babel-jest": "^29.6.1"
+  }
+}

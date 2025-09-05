@@ -1,0 +1,4 @@
+replicaCount: 2
+image:
+  backend: africloud/backend:latest
+  frontend: africloud/frontend:latest

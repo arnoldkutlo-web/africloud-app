@@ -1,0 +1,6 @@
+
+# Gradle signing template - DO NOT COMMIT KEYS. Use CI secrets or local gradle.properties
+MYAPP_UPLOAD_STORE_FILE=upload-keystore.jks
+MYAPP_UPLOAD_KEY_ALIAS=upload
+MYAPP_UPLOAD_STORE_PASSWORD=change_me_store_password
+MYAPP_UPLOAD_KEY_PASSWORD=change_me_key_password

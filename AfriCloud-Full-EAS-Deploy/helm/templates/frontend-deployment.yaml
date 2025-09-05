@@ -1,0 +1,17 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: africloud-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: africloud-frontend }
+  template:
+    metadata:
+      labels: { app: africloud-frontend }
+    spec:
+      containers:
+        - name: frontend
+          image: africloud/frontend:latest
+          ports: [{ containerPort: 80 }]

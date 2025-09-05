@@ -1,0 +1,14 @@
+
+<!doctype html><html><head><meta charset="utf-8"><title>AfriCloud Sync</title></head><body>
+  <h1>AfriCloud Sync Client (Electron)</h1>
+  <div id="app"></div>
+  <script>
+    async function start(){ 
+      const dir = prompt('Enter folder to sync (absolute path)');
+      if(!dir) return;
+      const res = await window.electronAPI.startSync(JSON.stringify({ dir }));
+      alert('Sync started: ' + res);
+    }
+    document.body.innerHTML += '<button onclick="start()">Start Sync</button>';
+  </script>
+</body></html>

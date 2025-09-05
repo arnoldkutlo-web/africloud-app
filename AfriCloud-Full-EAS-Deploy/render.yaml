@@ -1,0 +1,20 @@
+
+services:
+  - type: web
+    name: africloud-backend
+    env: docker
+    repo: https://github.com/<yourorg>/africloud
+    branch: main
+    dockerfilePath: backend/Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        value: ${DATABASE_URL}
+  - type: web
+    name: africloud-frontend
+    env: docker
+    repo: https://github.com/<yourorg>/africloud
+    branch: main
+    dockerfilePath: frontend/Dockerfile
+    envVars:
+      - key: API_URL
+        value: ${API_URL}

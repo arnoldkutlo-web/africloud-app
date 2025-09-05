@@ -1,0 +1,23 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: africloud-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: africloud-backend }
+  template:
+    metadata:
+      labels: { app: africloud-backend }
+    spec:
+      containers:
+        - name: backend
+          image: africloud/backend:latest
+          ports: [{ containerPort: 4000 }]
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef: { name: africloud-secrets, key: DATABASE_URL }
+            - name: AWS_REGION
+              value: us-east-1

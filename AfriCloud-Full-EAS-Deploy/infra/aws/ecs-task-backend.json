@@ -1,0 +1,14 @@
+
+{
+  "family": "africloud-backend-task",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "backend",
+      "image": "africloud/backend:latest",
+      "portMappings": [{ "containerPort": 4000 }],
+      "essential": true,
+      "environment": [{"name":"NODE_ENV","value":"production"}]
+    }
+  ]
+}

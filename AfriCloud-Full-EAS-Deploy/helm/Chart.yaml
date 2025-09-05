@@ -1,0 +1,6 @@
+{
+  "apiVersion": "v2",
+  "name": "africloud",
+  "version": "0.1.0",
+  "description": "AfriCloud helm chart scaffold"
+}

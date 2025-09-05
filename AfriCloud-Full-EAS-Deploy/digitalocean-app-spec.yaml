@@ -1,0 +1,15 @@
+
+name: africloud-demo
+services:
+  - name: frontend
+    image: registry.hub.docker.com/<youruser>/africloud-frontend:latest
+    run_command: null
+    envs:
+      - key: API_URL
+        value: https://<your-backend-url>/api
+  - name: backend
+    image: registry.hub.docker.com/<youruser>/africloud-backend:latest
+    envs:
+      - key: DATABASE_URL
+        value: postgres://... (use DO managed DB)
+deploy_on_push: true

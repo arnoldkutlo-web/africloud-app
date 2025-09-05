@@ -1,0 +1,3 @@
+
+# Azure App Service deployment guide (placeholder)
+# Use Azure Web Apps or Container Instances to deploy backend and frontend. Provide APP_SETTINGS and connection strings in Azure Portal.

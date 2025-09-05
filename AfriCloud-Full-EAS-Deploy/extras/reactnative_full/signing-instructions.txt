@@ -1,0 +1,16 @@
+
+Gradle signing configuration (template)
+
+1. Generate a keystore:
+   keytool -genkeypair -v -keystore upload-keystore.jks -alias upload -keyalg RSA -keysize 2048 -validity 10000
+
+2. Place upload-keystore.jks at android/app/upload-keystore.jks (or use CI secrets to create at build time).
+
+3. Add credentials to android/gradle.properties (do NOT commit real passwords). Use CI secrets to populate these values:
+   MYAPP_UPLOAD_STORE_FILE=upload-keystore.jks
+   MYAPP_UPLOAD_KEY_ALIAS=upload
+   MYAPP_UPLOAD_STORE_PASSWORD=... 
+   MYAPP_UPLOAD_KEY_PASSWORD=...
+
+EAS notes:
+- EAS can manage credentials if you let it handle signing via eas credentials.
